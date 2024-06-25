@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">TDR Administration</string>
+    <string name="login">Login</string>
+    <string name="email">Email*</string>
+    <string name="password">Password*</string>
+    <string name="app_availability">This app is only available for administrators.</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="fill_inputs">Please fill all required inputs.</string>
+    <string name="current_role_false">You current role don\'t allow you to use this app.</string>
+    <string name="no_data_found">No data found</string>
+    <string name="getting_data">Getting data…</string>
+    <string name="open">Open</string>
+    <string name="a_prob_happened_getting_data">A problem happened when getting data</string>
+    <string name="load_more">Load more</string>
+    <string name="no_more_data">No more data to show!</string>
+    <string name="details">Details</string>
+    <string name="professor">Professor</string>
+    <string name="time">Time</string>
+    <string name="absences">Absences</string>
+    <string name="there_is_no_absences">There are no absences</string>
+    <string name="class_">Class</string>
+    <string name="name">Name:</string>
+    <string name="subject">Subject:</string>
+    <string name="classD">Class:</string>
+    <string name="group">Group:</string>
+    <string name="date">Date:</string>
+    <string name="from">From:</string>
+    <string name="to">To:</string>
+    <string name="logout">Logout</string>
+</resources>
