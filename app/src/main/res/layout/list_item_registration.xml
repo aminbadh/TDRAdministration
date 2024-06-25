@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="8dp"
-    app:cardElevation="6dp"
     app:cardUseCompatPadding="true"
     app:contentPadding="12dp"
     tools:viewBindingIgnore="true">
@@ -15,42 +14,56 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textViewSubject"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:layout_constraintEnd_toStartOf="@+id/textViewDate"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Informatique" />
-
-        <TextView
-            android:id="@+id/textViewProfName"
+            android:id="@+id/textViewTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/dark_gray"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewSubject"
-            tools:text="Amin Badh" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12:0 -> 13:0" />
 
         <TextView
             android:id="@+id/textViewDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTime"
+            app:layout_constraintStart_toEndOf="@+id/textViewTime"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="10/06/2020" />
+            tools:text="12/03/2020" />
+
+        <TextView
+            android:id="@+id/textViewSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTime"
+            tools:text="Debug" />
+
+        <TextView
+            android:id="@+id/textViewProfessor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewSubject"
+            tools:text="Amin BADH" />
 
         <ImageView
-            android:id="@+id/imageViewArrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/open"
-            app:layout_constraintBottom_toBottomOf="@+id/textViewProfName"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textViewProfName"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_arrow_right" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

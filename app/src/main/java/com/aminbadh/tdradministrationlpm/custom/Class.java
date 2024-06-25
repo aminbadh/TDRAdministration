@@ -2,30 +2,27 @@ package com.aminbadh.tdradministrationlpm.custom;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class Class implements Serializable {
-    private String classNum, docId;
-    private Level level;
-    private ArrayList<String> students1, students2;
+    private String docRef;
+    private Map<String, String> data;
+    private ArrayList<String> students1, students2, absences;
 
     public Class() {
         // Used in Firebase Cloud Firestore.
     }
 
     public String getClassName() {
-        return level.getLevel() + classNum;
+        return data.get("full");
     }
 
-    public String getClassNum() {
-        return classNum;
+    public String getDocRef() {
+        return docRef;
     }
 
-    public String getDocId() {
-        return docId;
-    }
-
-    public Level getLevel() {
-        return level;
+    public ArrayList<String> getAbsences() {
+        return absences;
     }
 
     public ArrayList<String> getStudents1() {
@@ -36,11 +33,11 @@ public class Class implements Serializable {
         return students2;
     }
 
-    public void setDocId(String docId) {
-        this.docId = docId;
+    public Map<String, String> getData() {
+        return data;
     }
 
-    public void setLevel(Level level) {
-        this.level = level;
+    public void setDocRef(String docRef) {
+        this.docRef = docRef;
     }
 }

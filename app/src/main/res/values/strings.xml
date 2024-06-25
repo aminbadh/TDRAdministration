@@ -1,30 +1,73 @@
 <resources>
-    <string name="app_name">TDR Administration</string>
+    <string name="app_name" translatable="false">TDR Admin</string>
+    <string name="app_full">TDR Administration</string>
     <string name="login">Login</string>
     <string name="email">Email*</string>
     <string name="password">Password*</string>
     <string name="app_availability">This app is only available for administrators.</string>
     <string name="please_wait">Please wait…</string>
-    <string name="fill_inputs">Please fill all required inputs.</string>
-    <string name="current_role_false">You current role don\'t allow you to use this app.</string>
+    <string name="fill_inputs">Please fill in the required inputs.</string>
+    <string name="current_role_false">Your current role doesn\'t allow you to use this app.</string>
     <string name="no_data_found">No data found</string>
     <string name="getting_data">Getting data…</string>
     <string name="open">Open</string>
-    <string name="a_prob_happened_getting_data">A problem happened when getting data</string>
-    <string name="load_more">Load more</string>
-    <string name="no_more_data">No more data to show!</string>
     <string name="details">Details</string>
     <string name="professor">Professor</string>
     <string name="time">Time</string>
-    <string name="absences">Absences</string>
     <string name="there_is_no_absences">There are no absences</string>
     <string name="class_">Class</string>
-    <string name="name">Name:</string>
-    <string name="subject">Subject:</string>
-    <string name="classD">Class:</string>
-    <string name="group">Group:</string>
-    <string name="date">Date:</string>
-    <string name="from">From:</string>
-    <string name="to">To:</string>
     <string name="logout">Logout</string>
+    <string name="create_account">Create an account</string>
+    <string name="you_are_offline">You are offline!</string>
+    <string name="account_information">Account information</string>
+    <string name="user_s_information">User\'s information</string>
+    <string name="permission_code">Permission code</string>
+    <string name="first_name">First Name*</string>
+    <string name="last_name">Last Name*</string>
+    <string name="code">Code*</string>
+    <string name="sign_up">Sign up</string>
+    <string name="permission_not_exist">Permission code does not exist!</string>
+    <string name="permission_low">The permission level is low!</string>
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="change_email">Change email address</string>
+    <string name="new_email">New email Address</string>
+    <string name="change_password">Change password</string>
+    <string name="new_password">New password</string>
+    <string name="english" translatable="false">English</string>
+    <string name="french" translatable="false">Français</string>
+    <string name="select_language">Select a language</string>
+    <string name="logout_q">Logout?</string>
+    <string name="logout_info">Login data won\'t be saved!</string>
+    <string name="exit_now">Exit now</string>
+    <string name="change_your_current_e_mail_address">Change your current email address.</string>
+    <string name="change_your_current_password">Change your current password.</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="tell_us_your_questions_we_re_happy_to_help">Got any queries? We\'re happy to help!</string>
+    <string name="made_in_lpm">Made in LPM</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="updating">Updating…</string>
+    <string name="email_updated">Email address updated successfully!</string>
+    <string name="password_updated">Password updated successfully!</string>
+    <string name="v" translatable="false">v</string>
+    <string name="dev_email_address" translatable="false">aminbadh@gmail.com</string>
+    <string name="feedback_from" translatable="false">Feedback from:</string>
+    <string name="do_not_delete">---PLEASE DON\'T DELETE THIS---</string>
+    <string name="app_package" translatable="false">App package =</string>
+    <string name="app_version" translatable="false">App version =</string>
+    <string name="restart_to_change_the_language">Please restart the app to apply changes.</string>
+    <string name="remove">Remove</string>
+    <string name="remove_student_q">Remove student?</string>
+    <string name="remove_info_1">Are you sure that you want to remove</string>
+    <string name="remove_info_2">from the absences list?</string>
+    <string name="students_removed">Student removed!</string>
+    <string name="class_c">Class:</string>
+    <string name="name_c">Name:</string>
+    <string name="subject_c">Subject:</string>
+    <string name="from_c">From:</string>
+    <string name="to_c">To:</string>
+    <string name="date_c">Date:</string>
+    <string name="absences">Absences</string>
+    <string name="create_account_admin">Don\'t have an account?\nContact the administration to create one.</string>
 </resources>

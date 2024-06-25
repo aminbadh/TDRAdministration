@@ -10,36 +10,47 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aminbadh.tdradministrationlpm.R;
 import com.aminbadh.tdradministrationlpm.custom.Class;
+import com.aminbadh.tdradministrationlpm.interfaces.OnData;
 import com.aminbadh.tdradministrationlpm.interfaces.OnMainListener;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
-import java.util.ArrayList;
+public class ClassRecyclerAdapter extends FirestoreRecyclerAdapter<Class,
+        ClassRecyclerAdapter.ClassHolder> {
 
-public class ClassRecyclerAdapter extends RecyclerView.Adapter<ClassRecyclerAdapter.ClassHolder> {
-
-    private final ArrayList<Class> classes;
     private final OnMainListener onMainListener;
+    private final OnData onData;
 
-    public ClassRecyclerAdapter(ArrayList<Class> classes, OnMainListener onMainListener) {
-        this.classes = classes;
+    public ClassRecyclerAdapter(@NonNull FirestoreRecyclerOptions<Class> options,
+                                OnMainListener onMainListener, OnData onData) {
+        super(options);
         this.onMainListener = onMainListener;
+        this.onData = onData;
     }
 
     @NonNull
     @Override
     public ClassHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_item_main, parent, false);
+                .inflate(R.layout.list_item_class, parent, false);
         return new ClassHolder(view, onMainListener);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ClassHolder holder, int position) {
-        holder.textViewName.setText(classes.get(position).getClassNum());
+    protected void onBindViewHolder(@NonNull ClassHolder holder, int position, @NonNull Class model) {
+        holder.textViewName.setText(model.getClassName());
     }
 
     @Override
-    public int getItemCount() {
-        return classes.size();
+    public void onDataChanged() {
+        super.onDataChanged();
+        onData.onData();
+    }
+
+    public Class getClass(int position) {
+        Class mClass = getItem(position);
+        mClass.setDocRef(getSnapshots().getSnapshot(position).getReference().getPath());
+        return mClass;
     }
 
     static class ClassHolder extends RecyclerView.ViewHolder {

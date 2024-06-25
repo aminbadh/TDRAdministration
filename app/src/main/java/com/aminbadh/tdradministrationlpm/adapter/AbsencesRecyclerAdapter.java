@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aminbadh.tdradministrationlpm.R;
-import com.aminbadh.tdradministrationlpm.interfaces.OnMainListener;
 
 import java.util.ArrayList;
 
@@ -17,11 +16,9 @@ public class AbsencesRecyclerAdapter extends
         RecyclerView.Adapter<AbsencesRecyclerAdapter.AbsencesHolder> {
 
     private final ArrayList<String> absences;
-    private final OnMainListener onMainListener;
 
-    public AbsencesRecyclerAdapter(ArrayList<String> absences, OnMainListener onMainListener) {
+    public AbsencesRecyclerAdapter(ArrayList<String> absences) {
         this.absences = absences;
-        this.onMainListener = onMainListener;
     }
 
     @NonNull
@@ -29,7 +26,7 @@ public class AbsencesRecyclerAdapter extends
     public AbsencesHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_student,
                 parent, false);
-        return new AbsencesHolder(view, onMainListener);
+        return new AbsencesHolder(view);
     }
 
     @Override
@@ -46,10 +43,9 @@ public class AbsencesRecyclerAdapter extends
     static class AbsencesHolder extends RecyclerView.ViewHolder {
         TextView textViewStudentName;
 
-        public AbsencesHolder(@NonNull View itemView, final OnMainListener onMainListener) {
+        public AbsencesHolder(@NonNull View itemView) {
             super(itemView);
             textViewStudentName = itemView.findViewById(R.id.textViewStudentName);
-            itemView.setOnClickListener(view -> onMainListener.onClickListener(getAdapterPosition()));
         }
     }
 }
